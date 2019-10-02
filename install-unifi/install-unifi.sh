@@ -4,8 +4,7 @@
 # Installs the Uni-Fi controller software on a FreeBSD machine (presumably running pfSense).
 
 # The latest version of UniFi:
-UNIFI_SOFTWARE_URL=$(curl -s 'https://fw-update.ubnt.com/api/firmware?filter=eq~~product~~unifi-controller&filter=eq~~platform~~unix&filter=eq~~channel~~release&sort=-version&limit=1' | jq '._embedded.firmware[0]._links.data.href' )
-echo "Installing version - $UNIFI_SOFTWARE_URL";
+UNIFI_SOFTWARE_URL="https://fw-download.ubnt.com/data/unifi-controller/d469-unix-5.11.46-7b7e94baba614412a620278d62922158.zip"
 
 # The rc script associated with this branch or fork:
 RC_SCRIPT_URL="https://raw.githubusercontent.com/gozoinks/unifi-pfsense/master/rc.d/unifi.sh"
