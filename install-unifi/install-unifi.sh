@@ -6,8 +6,6 @@
 # The latest version of UniFi:
 UNIFI_SOFTWARE_URL=$(curl -s 'https://fw-update.ubnt.com/api/firmware?filter=eq~~product~~unifi-controller&filter=eq~~platform~~unix&filter=eq~~channel~~release&sort=-version&limit=1' | jq '._embedded.firmware[0]._links.data.href' )
 echo "Installing version - $UNIFI_SOFTWARE_URL";
-# The rc script associated with this branch or fork:
-RC_SCRIPT_URL="https://raw.githubusercontent.com/cobhc2019/unifi-pfsense/5.11.27/rc.d/unifi.sh"
 
 # The rc script associated with this branch or fork:
 RC_SCRIPT_URL="https://raw.githubusercontent.com/gozoinks/unifi-pfsense/master/rc.d/unifi.sh"
